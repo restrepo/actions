@@ -20,5 +20,7 @@ jobs:
     - name: ls
       run: ls main.pdf
     - name: release
-      run: git add main.pdf && git commit -am 'pdf' && git push
-
+      uses: JasonEtco/upload-to-release@master
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      args: main.pdf
