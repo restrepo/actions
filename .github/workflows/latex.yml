@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: check
+      run: ls
     - name: update
       run: sudo apt-get update
     - name: install
