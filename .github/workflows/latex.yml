@@ -19,3 +19,8 @@ jobs:
       run: pdflatex main.tex
     - name: ls
       run: ls main.pdf
+    - name: release
+      uses: JasonEtco/upload-to-release@master
+      args: my-image.tar
+      secrets: ["GITHUB_TOKEN"]
+      needs: ["Save the image"]
