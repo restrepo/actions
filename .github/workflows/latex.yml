@@ -20,7 +20,8 @@ jobs:
     - name: ls
       run: ls main.pdf
     - name: release
-      uses: JasonEtco/upload-to-release@master
-      args: main.pdf
-      secrets: ["GITHUB_TOKEN"]
-      needs: ["Save the image"]
+      run: git add main.pdf && git commit -am 'pdf'
+
+  push:
+    branches:    # Array of patterns that match refs/heads
+    - master 
