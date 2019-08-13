@@ -8,9 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@master
-    - name: install
-      run: apt install texlive
     - name: pdf
       run: pdflatex main.tex
     - name: ls
