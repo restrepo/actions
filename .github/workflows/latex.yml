@@ -19,7 +19,7 @@ jobs:
       run: pdflatex main.tex
     - name: ls
       run: ls main.pdf
-    - name: release
-      uses: JasonEtco/upload-to-release@master main.pdf
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #- name: release
+    #  uses: JasonEtco/upload-to-release@master main.pdf
+    #  env:
+    #      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
