@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: update
+      run: sudo apt-get update
     - name: install
       run: sudo apt-get install texlive
     - name: pdf
