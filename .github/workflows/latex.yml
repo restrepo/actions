@@ -1,2 +1,25 @@
-- name: LaTeX compilation
-  uses: dante-ev/latex-action@v0.2.0
+name: LaTeX
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@master
+    - name: check
+      run: ls
+    - name: update
+      run: sudo apt-get update
+    - name: install
+      run: sudo apt-get install texlive
+    - name: pdf
+      run: pdflatex main.tex
+    - name: ls
+      run: ls main.pdf
+    #- name: release
+    #  uses: JasonEtco/upload-to-release@master main.pdf
+    #  env:
+    #      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
